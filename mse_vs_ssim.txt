@@ -1,6 +1,0 @@
-In MSE when i feed the same input image data it perfectly showss 0.0 But in SSIM even i feed the same image data it still shows 1.0 
-In MSE when value increases the image are less similar but in  SSIM where smaller value indicate less similarity.
-I tried image with rotated with 180 degree still both shows the same results.
-when i feed the the same image vs same image + overlay of another image it result : MSE value decrease when its compared to contrasted image compare value 
-but the SSIM does something different the value of SSIM when it compared to contrasted image compare value 
-if accuracy matters we should go with SSIM, sreenivas but it cost some performance when compared to MSE
