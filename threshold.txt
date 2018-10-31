@@ -1,0 +1,14 @@
+In Our Artwork Case I've used all the cases of thresholding. 
+
+THRESH_BINARY
+THRESH_BINARY_INV
+THRESH_OTSU
+THRESH_BINARY_INV + THRESH_OTSU
+ADAPTIVE_THRESH_GAUSSIAN_C
+THRESH_TRUNC
+GAUSS+OTSU
+
+From All these thresholding which I found some thresholding results interesting and It is optimal for retreive the data from the image 
+1. Adaptive thresh gaussian In which produce the good results but the Adaptive thresholding is very good for various different light condition in Our case Artwork is different
+2.In THRESH_BINARY_INV which is quite impressive it returns the whole image data, which is really good
+3. In third case THRESH_BINARY_INV + THRESH_OTSU which returns all the text data in the artwork images In which i thinks Great!!!
