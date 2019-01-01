@@ -33,4 +33,5 @@ def img_watershed():
     cv.destroyAllWindows()
 
 
-img_watershed()
+if __name__ =="__main__":
+    img_watershed()
