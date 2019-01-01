@@ -10,12 +10,13 @@ def opening_n_closing():
     closing = cv.morphologyEx(threshold, cv.MORPH_CLOSE, kernel, iterations=3)
     dilate = cv.erode(closing, kernel, iterations=4)
     fg = cv.dilate(dilate, kernel, iterations=15)
-    dist_trans = cv.distanceTransform(fg, cv.DIST_L2, 0)
+    dist_trans = cv.distanceTransform(fg, cv.DIST_L2ś, 0)
     ret_val2, fg = cv.threshold(dist_trans, 0.05 * dist_trans.max(), 255, 0)
     cv.imshow('fg', fg)
     cv.imshow('dilate', dilate)
     cv.waitKey(0)
     cv.destroyAllWindows()
+
 
 def detect():
     img = cv.imread(r'E:\pyworks\coin-detection.jpg')
