@@ -1,5 +1,6 @@
+Minor Shift makes major change in MSE because of pixel wise difference detection and because of SSIM is based on patch by patch compare it is low compared to MSE
 In MSE when value increases the image are less similar but in  SSIM where smaller value indicate less similarity.
 the minor shift makes much deviation in MSE when compared to SSIM.
 when i feed the the same image vs same image + overlay of another image it result : MSE value decrease when its compared to contrasted image compare value 
-but the SSIM does something different the value of SSIM when it compared to contrasted image compare value 
+but the SSIM does something different the value of SSIM when it compared to contrasted image compare value
 if accuracy matters we should go with SSIM, sreenivas but it cost some performance when compared to MSE
