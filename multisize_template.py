@@ -5,7 +5,7 @@ from argparse import ArgumentParser
 
 
 class TemplateMatching:
-    def __init__(self, image='', template='', visualize_flag='', threshold=500000):
+    def __init__(self, image='', template='', visualize_flag='', threshold=0):
         """
         Initialization function for Template Matching
         :param image: Source file location (PNG or JPG or other relevant image extensions allowed)
@@ -67,7 +67,7 @@ class TemplateMatching:
                     if resize.shape[0] < template_height or resize.shape[1] < template_width:
                         break
                     edged = cv.Canny(resize, 50, 200)
-                    result = cv.matchTemplate(edged, template, cv.TM_CCOEFF)
+                    result = cv.matchTemplate(edged, template, cv.TM_CCOEFF_NORMED)
                     (_, maxVal, _, maxLoc) = cv.minMaxLoc(result)
                     if self.visualize_flag == 1:
                         clone = np.dstack([edged, edged, edged])
